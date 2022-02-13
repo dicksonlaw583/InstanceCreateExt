@@ -27,8 +27,8 @@ Get the current asset package from [the releases page](https://github.com/dickso
 
 ```
 instance_create_layer_ext(x, y, "Instances", obj_bullet, {
-    sprite_index: spr_grapeshot,
-	hspeed: 5
+	sprite_index: spr_grapeshot,
+	hspeed: 5,
 });
 ```
 
