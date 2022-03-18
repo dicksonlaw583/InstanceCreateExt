@@ -1,7 +1,7 @@
 # Extended Instance Creation
 
 ```
-instance_create_depth(0, 0, 2022, obj_library, {
+instance_create_depth_ext(0, 0, 2022, obj_library, {
 	product: "GameMaker Studio 2.3",
 	announce: function() {
 		show_message("Create customized instances with ease on " + product + "!");
