@@ -11,11 +11,12 @@ https://yal.cc/gamemaker-create-event-arguments/
 **/
 
 ///@func instance_create_layer_ext(x, y, layer, obj, vars)
-///@arg {real} x The x position to create the instance at
-///@arg {real} y The y position to create the instance at
-///@arg {string|layer_id} layer The layer to create the instance on
-///@arg {object_id} obj The object to create an instance of
-///@arg {struct} vars Struct consisting of instance variables to inject
+///@arg {Real} x The x position to create the instance at
+///@arg {Real} y The y position to create the instance at
+///@arg {String|Id.Layer} layer The layer to create the instance on
+///@arg {Resource.GMObject} obj The object to create an instance of
+///@arg {Struct} vars Struct consisting of instance variables to inject
+///@return {Id.Instance}
 ///@desc Create an instance of the given object on the specified layer. Return the ID of the created instance.
 function instance_create_layer_ext(_x, _y, _layer, _obj, _vars) {
 	var _inst = instance_create_layer(_x, _y, _layer, __OBJ_INSTANCE_CREATE_EXT_EMBRYO__);
@@ -26,11 +27,12 @@ function instance_create_layer_ext(_x, _y, _layer, _obj, _vars) {
 }
 
 ///@func instance_create_depth_ext(x, y, depth, obj, vars)
-///@arg {real} x The x position to create the instance at
-///@arg {real} y The y position to create the instance at
-///@arg {int} depth The depth to create the instance at
-///@arg {object_id} obj The object to create an instance of
-///@arg {struct} vars Struct consisting of instance variables to inject
+///@arg {Real} x The x position to create the instance at
+///@arg {Real} y The y position to create the instance at
+///@arg {Real} depth The depth to create the instance at
+///@arg {Resource.GMObject} obj The object to create an instance of
+///@arg {Struct} vars Struct consisting of instance variables to inject
+///@return {Id.Instance}
 ///@desc Create an instance of the given object at the specified depth. Return the ID of the created instance.
 function instance_create_depth_ext(_x, _y, _depth, _obj, _vars) {
 	var _inst = instance_create_depth(_x, _y, _depth, __OBJ_INSTANCE_CREATE_EXT_EMBRYO__);
@@ -41,8 +43,8 @@ function instance_create_depth_ext(_x, _y, _depth, _obj, _vars) {
 }
 
 ///@func __instance_create_ext_kernel__(obj, vars)
-///@arg {object_id} obj The object to change into
-///@arg {struct} vars Struct consisting of instance variables to inject
+///@arg {Resource.GMObject} obj The object to change into
+///@arg {Struct} vars Struct consisting of instance variables to inject
 ///@desc (INTERNAL ONLY) Finish changing the embryo's object identity and variables.
 function __instance_create_ext_kernel__(_obj, _vars) {
 	instance_change(_obj, false);
